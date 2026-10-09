@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Balanced Speed Car Racing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Start Screen -->
+  <div id="startScreen">
+    <h1>ENHANCED SPEED RACER</h1>
+    <p>Race through obstacles and collect bonuses!</p>
+    <ul>
+      <li><i class="fas fa-arrow-left"></i> Use ◀ ▶ buttons or ← → keys to steer</li>
+      <li><i class="fas fa-mobile-alt"></i> Swipe on mobile or drag to move</li>
+      <li><i class="fas fa-ban"></i> Avoid red obstacles</li>
+      <li><i class="fas fa-coins"></i> Collect gold coins for points</li>
+      <li><i class="fas fa-bolt"></i> Grab green boosts for speed</li>
+      <li><i class="fas fa-trophy"></i> Beat your high score!</li>
+    </ul>
+    <button id="startButton">START RACE</button>
+  </div>
+
+  <!-- Game Container -->
+  <div id="gameContainer">
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    
+    <div id="countdown">3</div>
+    
+    <div id="pauseScreen">
+      <h2>GAME PAUSED</h2>
+      <p>Press P or the button to resume</p>
+      <button id="resumeButton">RESUME</button>
+    </div>
+
+    <div id="cssCar">
+      <div class="roof"></div>
+      <div class="body"></div>
+      <div class="headlight left"></div>
+      <div class="headlight right"></div>
+      <div class="wheel front-wheel"></div>
+      <div class="wheel back-wheel"></div>
+    </div>
+
+    <button id="restartButton">RESTART GAME</button>
+    <div id="developerCredit">Developed by AIT Inc Ltd</div>
+
+    <div id="gameInfo">Score: <span id="scoreDisplay">0</span></div>
+    <div id="highScore">High Score: <span id="highScoreDisplay">0</span></div>
+    <div id="boostIndicator"><div id="boostBar"></div></div>
+
+    <button id="leftBtn"  class="steer-button">◀</button>
+    <button id="rightBtn" class="steer-button">▶</button>
+  </div>
+
+  <!-- Audio elements -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="coinSound" preload="auto">
+    <source src="https://www.soundjay.com/buttons/sounds/button-09.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="boostSound" preload="auto">
+    <source src="https://www.soundjay.com/buttons/sounds/button-09.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="crashSound" preload="auto">
+    <source src="https://www.soundjay.com/buttons/sounds/button-10.mp3" type="audio/mpeg">
+  </audio>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="theme-color" content="#0a0f1e">
+    <title>Neon Rush — Enhanced Speed Racer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="startScreen">
+        <h1>NEON RUSH</h1>
+        <p class="tag">Race the night. Dodge, boost, collect — survive.</p>
+        <ul class="howto">
+            <li><span class="ic">⬅️➡️</span> Steer with arrow keys / A·D / on-screen buttons</li>
+            <li><span class="ic">👆</span> Drag anywhere on the road to steer</li>
+            <li><span class="ic">🚧</span> Dodge barriers, cones & traffic</li>
+            <li><span class="ic">🪙</span> Chain coins fast for up to <b>&nbsp;x5 combo</b></li>
+            <li><span class="ic">⚡</span> <b>&nbsp;NITRO&nbsp;</b> = blazing speed</li>
+            <li><span class="ic">🛡️</span> <b>&nbsp;SHIELD&nbsp;</b> = survive one crash</li>
+            <li><span class="ic">⏯️</span> P / Esc = pause &nbsp;·&nbsp; M = mute</li>
+        </ul><button id="startButton" class="neon-btn">START ENGINE ▶</button>
+        <div class="best-pill">🏆 BEST: <span id="menuBest">0</span></div>
+        <div class="hint">Tip: press Space / Enter to start</div>
+        <div class="credit">Developed by Toha</div>
+    </div>
+    <div id="gameContainer"><canvas id="gameCanvas"></canvas>
+        <div id="hud">
+            <div id="scorePanel" class="glass">
+                <div class="score">SCORE <span id="scoreVal">0</span></div>
+                <div class="sub">🪙 <span id="coinVal">0</span> &nbsp;·&nbsp; 📏 <span id="distVal">0</span>m</div>
+                <div id="levelBadge">LV <span id="levelVal">1</span> · <span id="speedVal">0</span> km/h</div>
+                <div id="comboTag">COMBO x2</div>
+            </div>
+            <div id="bestPanel" class="glass">🏆 <span id="bestVal">0</span></div>
+            <div id="topBtns"><button id="pauseBtn" class="icon-btn" title="Pause (P)">⏸</button> <button id="muteBtn"
+                    class="icon-btn" title="Mute (M)">🔊</button></div>
+            <div id="nitroWrap">
+                <div class="lbl">NITRO</div>
+                <div id="nitroBar">
+                    <div id="nitroFill"></div>
+                </div>
+            </div>
+        </div>
+        <div id="countdown">3</div>
+        <div class="overlay" id="pauseOverlay">
+            <h2>PAUSED</h2>
+            <div class="panel"><button id="resumeBtn" class="btn btn-primary">▶ RESUME</button> <button id="restartBtnP"
+                    class="btn btn-ghost">⟲ RESTART</button> <button id="quitBtn" class="btn btn-ghost">⌂ MAIN
+                    MENU</button>
+                <div class="small">Press P or Esc to resume</div>
+            </div>
+        </div>
+        <div class="overlay" id="gameoverOverlay">
+            <h2>WRECKED!</h2>
+            <div class="panel">
+                <div id="newRecord">🏆 NEW RECORD! 🏆</div>
+                <div class="stats">
+                    <div class="row"><span>SCORE</span><b id="goScore">0</b></div>
+                    <div class="row"><span>COINS</span><b id="goCoins">0</b></div>
+                    <div class="row"><span>DISTANCE</span><b id="goDist">0m</b></div>
+                    <div class="row"><span>LEVEL</span><b id="goLevel">1</b></div>
+                    <div class="row"><span>BEST</span><b id="goBest">0</b></div>
+                </div><button id="restartBtnG" class="btn btn-primary">⟲ RACE AGAIN</button> <button id="menuBtnG"
+                    class="btn btn-ghost">⌂ MAIN MENU</button>
+                <div class="small">Press R to restart</div>
+            </div>
+        </div><button id="leftBtn" class="steer-button">◀</button> <button id="rightBtn" class="steer-button">▶</button>
+    </div>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
+</body>
+
+</html>
